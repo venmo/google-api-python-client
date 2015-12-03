@@ -66,25 +66,25 @@ install_requires = [
     'httplib2>=0.8',
     'oauth2client>=1.4.6',
     'six>=1.6.1',
-    'uritemplate>=0.6',
+    'uritemplate.py>=0.3',
 ]
 
 if sys.version_info < (2, 7):
   install_requires.append('argparse')
 
-long_desc = """The Google API Client for Python is a client library for
-accessing the Plus, Moderator, and many other Google APIs."""
+long_desc = ("This is a fork of https://github.com/google/google-api-python-client"
+             " with the changes from https://github.com/google/google-api-python-client/pull/146")
 
 import googleapiclient
 version = googleapiclient.__version__
 
 setup(
-    name="google-api-python-client",
+    name="google-api-python-client-uritemplate",
     version=version,
-    description="Google API Client Library for Python",
+    description="Google API Client Library for Python (uritemplate.py compatibility fork)",
     long_description=long_desc,
     author="Google Inc.",
-    url="http://github.com/google/google-api-python-client/",
+    url="http://github.com/venmo/google-api-python-client/",
     install_requires=install_requires,
     packages=packages,
     package_data={},
